@@ -1,0 +1,27 @@
+<html>
+<head>
+ <script src="http://code.jquery.com/jquery-2.2.0.js">
+ </script>
+ <title>Hello</title>
+ <script>
+ $(document).ready(function() {
+ var url = 'https://api.forecast.io/forecast/e9e00028f34d9cfa8aeff7fc12ff9bad/40.014984,-105.270546'
+ $.ajax({url:url, dataType:"jsonp"}).then(function(data) {
+ $('#results').text(data.currently.temperature)
+ $('#result').text(data.currently.summary)
+ $('#resul').text(data.currently.humidity)
+
+ })
+ })
+ </script>
+</head>
+<body>
+<p>Hello, world.</p>
+<p>Temperature:</p>
+<p id="results">original</p>
+<p>Conditions:</p>
+<p id="result">original</p>
+<p>Humidity:</p>
+<p id="resul">original</p>
+</body>
+</html>

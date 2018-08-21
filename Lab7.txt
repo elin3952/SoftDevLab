@@ -1,0 +1,20 @@
+﻿Snippet 1: 
+
+Class o is a nondescript name, bad
+All the names are nondescript.
+
+Snippet 2:
+
+path variable should lead to a specific path, which should be input from the user 
+The state_change will check for new things in the directory and needs to be moved 
+This start time should be moved within a statement that only times if there is a new json file added to the directory. It is timing how long it took to open the file, and it needs to be moved so it times all of the process. 
+
+Snippet 3:
+
+Need to update the avg variable since it is printed  afterwards. The path should not be hard-coded in, it should be an input from the user. 
+
+Peer Review: 
+
+
+
+

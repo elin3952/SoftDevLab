@@ -1,0 +1,97 @@
+﻿CSCI 3308 Software Development Methods and Tools [Fall 2017] 
+Instructor: Alan Paradise
+TA: Pratima Sherkane, Prasanna Srinivasachar, Rashmi Shetty
+Lab 5 – Material by Grace Muzny.
+HTML/CSS
+Objectives			
+Understand webpage layout
+Work with browser code inspection tools
+Practice creating web pages
+
+For this lab you may work with a partner. 
+
+For the first part, you will turn in a text file that answers all of the numbered questions.
+Part 1: Manipulate a web page using browser inspection tools
+Download boxes.html and boxes.css from moodle. Place both of them in the same directory, then open boxes.html using either Mozilla Firefox or Google Chrome.
+Right click on the webpage to inspect the elements (“Inspect Element” in Firefox, “Inspect” in Chrome).
+1. Give div1 a new background color. What css rule did you use? How would you write it in a css file so that only this div gets the new background color?
+#div{
+background: #37F1D7;
+} 
+2. Edit the margin and padding attributes of the divs. What does changing the margin do? What does changing the padding do?
+Changing the margin changed the space between the boxes, changing the padding changes the size of the actual boxes. 
+margin: 50px;
+padding: 50px;
+
+
+Now change the background color of the <p> element inside div 1 to yellow.
+3. Change the margin and padding of the yellow <p>. What happens if the margin is greater than 100px? What happens if the padding is greater than 100px?
+#div1 p{
+	background: yellow;
+	margin: 100px;
+}
+When the margin is greater than 100 px then you can’t see the paragraph. 
+4. Keeping the padding greater than 100px, change the overflow of div1. What is the difference between scroll and hidden?
+overflow: scroll; //allows you to scroll to see the rest of the text
+overflow: hidden //no scroll
+
+
+Refresh the page to return the divs to their original states.
+5. Give all divs the float: left attribute. What order are they in?  What if they all have the float: right attribute instead?
+Left Attribute: 1, 2, 3 (in a row and left aligned) 
+Right Attribute: 3, 2, 1 (in a row and right aligned) 
+
+6. Keeping all divs with the float: right attribute, give each one in turn the two attributes float: left and clear: right. Describe the relative positions of the boxes with each combination.
+Box one is right aligned left and by itself. Then box 3 and 2 are next to each other in that order (from left to right) and right aligned on the page. If you give div2 the float it will switch places with box 1. Same thing wil happen to box 3.
+
+7. Refresh the page and recreate the arrangement of divs shown in the picture on the right:
+What attributes do the divs have?
+Div{
+float: left;
+} // #div1 and #div2 don’t have float
+#div3{
+float: inherit;
+margin-top: 80px;
+}
+
+Refresh the page to return the divs to their original states.
+8. Give the body element a margin value of 0px. What changes? What does this tell you about the default margin value?
+There is no gap no between the page border and the boxes. This tells us the default margin allows for some space between the page border and the content. 
+
+
+For the second part, you will turn in your finished menu.html and menu.css files. Use whatever text editor you are most comfortable developing html/css in.
+Part 2: Create a CSS menu
+Create two files: menu.html and menu.css. Place these in the same directory.
+Add a title and a link element in the header of menu.html to link it to menu.css.
+In menu.html, create one parent div (this will be the main menu container) with at least 4 divs inside of it (these will be the menu items). Write some text in <p> elements in the menu item divs. You choose what text!
+Change the menu div so that its width is 20% of the page.
+Give each menu item a margin of 5px on the top, bottom, and right sides.
+Give each menu item a total padding of 10px. Make sure to change or account for the default settings of the <p> elements.
+Give your menu div & its children borders.
+Create a second div at the same level as your menu div. This div will contain the information on your page.
+Put the same number of sections in your info div as you have menu options.
+Float the divs so that they appear next to each other. You will need to adjust the width of your info div.
+Use <a> elements to link each menu item to its corresponding text section. Hint: search how you can use <a> elements and element ids to link to somewhere in your page.
+Your page should look similar to the following screenshot:
+
+Next, we want to force the menu to stay in the same position when the page is scrolled. Use the position attribute to make this happen.
+If your text appears behind the menu when you do this, think about where your divs are floating. Make it so that the text is not behind the menu.
+Change the borders so that the menu div and the info div have the same style but the menu items have a different style.
+Keeping the main layout and mechanics of the page the same, use your creative design skills to personalize it. Some ideas: Change the font. Change the colors. Make the links so that they look different. Put some images in. Give the body of the page a main header. Use the :hover selector to change the appearance of an/some element/s when you hover over them. Do what you want. Make rounded corners. Change the padding and margin of the info div.
+Things that you should not change: margin & padding in the menu; relative position of the menu to the info; the mechanics of how the page functions.
+To receive credit for this part, you must change at least 5 different things. Changing the font for all section headers would count as changing 1 thing. Comment the changes that you have made in your css file.
+// Changed Font
+// Aligned menu items in center
+// menu items background color
+//Background color of the info page 
+//removed lines from links in menu 
+Warning: make sure that all css rules that you use are written in menu.css. When we load the page, we want to see what you see.
+Double check to ensure that you have used classes and ids appropriately both in your html and to assign attribute values in your css.
+
+To Receive Credit:
+Turn in one zip file named <Lastname>_lab5.zip or <Lastname1>_<Lastname2>_lab5.zip that contains the following:
+Each file should contain a comment with your name (and your partner’s name)
+part1.txt with the answers to the numbered questions in part 1
+menu.html (the html code for your webpage)
+menu.css (the corresponding css)
+
